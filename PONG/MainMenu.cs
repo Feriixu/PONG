@@ -36,7 +36,7 @@ namespace PONG
 
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PictureBoxMehrspieler_Click(object sender, EventArgs e)
@@ -44,24 +44,11 @@ namespace PONG
 
         }
 
-        private void PictureBoxMehrspieler_MouseLeave(object sender, EventArgs e)
-        {
-            ((PictureBox)sender).BackgroundImage = Properties.Resources.mehrDisabled;
-        }
 
-        private void PictureBoxMehrspieler_MouseEnter(object sender, EventArgs e)
-        {
-            ((PictureBox)sender).BackgroundImage = Properties.Resources.mehr;
-        }
 
-        private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e)
-        {
-            ((PictureBox)sender).BackgroundImage = Properties.Resources.einzel;
-        }
-
-        private void PictureBoxEinzelspieler_MouseLeave(object sender, EventArgs e)
-        {
-            ((PictureBox)sender).BackgroundImage = Properties.Resources.einzelDisabled;
-        }
+        private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.einzel;
+        private void PictureBoxEinzelspieler_MouseLeave(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.einzelDisabled;
+        private void PictureBoxMehrspieler_MouseEnter(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.mehr;
+        private void PictureBoxMehrspieler_MouseLeave(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.mehrDisabled;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class Arena : UserControl
+    public partial class Spielfeld : UserControl
     {
-        public Arena()
+        public Spielfeld()
         {
             InitializeComponent();
         }
