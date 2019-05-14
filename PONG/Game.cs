@@ -4,13 +4,17 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class Game : Form
+    public partial class Spiel : Form
     {
         System.Timers.Timer timer1, timer2;
 
         Graphics Draw;
         SolidBrush sb = new SolidBrush(Color.White);
-        public Game()
+        public int ball;
+        public int paddel1;
+        public int paddel2;
+
+        public Spiel()
         {
             InitializeComponent();
             gameArena.BackColor = Color.Black;

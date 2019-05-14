@@ -1,6 +1,6 @@
 ﻿namespace PONG
 {
-    partial class Game
+    partial class Spiel
     {
         /// <summary>
         /// Erforderliche Designervariable.

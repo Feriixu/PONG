@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="PONG.Spielfeld">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+  <Class Name="PONG.Spiel">
+    <Position X="3.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Arena.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PONG.Game">
-    <Position X="8.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAADAAAkACAACAAAACAAAAIAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAgAAAADAAAkACAACAAAACAAAAIAAAgAAAAAAAAAk=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -22,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.PongGame">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEIkEACAAAAABMCEAAgAACAAAECAAAAgAkKAAAAAAA=</HashCode>
       <FileName>PongGame.cs</FileName>
@@ -35,7 +28,7 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PONG.Properties.Resources">
+  <Class Name="PONG.Properties.Resources" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgBAQAAAACAAAAABMEEAASAgAQAAAAAgAAAAAIA=</HashCode>
@@ -45,6 +38,27 @@
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Spielobjekt">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>Spielobjekt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Ball">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Paddel">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Paddel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
