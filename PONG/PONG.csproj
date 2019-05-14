@@ -133,5 +133,20 @@
   <ItemGroup>
     <None Include="Resources\punkteDisabled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punkteDisabledSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punkteSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endlosDisabledSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endlosSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuClick.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

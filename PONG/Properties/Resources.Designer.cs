@@ -103,6 +103,26 @@ namespace PONG.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap endlosDisabledSelected {
+            get {
+                object obj = ResourceManager.GetObject("endlosDisabledSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap endlosSelected {
+            get {
+                object obj = ResourceManager.GetObject("endlosSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mehr {
             get {
                 object obj = ResourceManager.GetObject("mehr", resourceCulture);
@@ -117,6 +137,15 @@ namespace PONG.Properties {
             get {
                 object obj = ResourceManager.GetObject("mehrDisabled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.IO.UnmanagedMemoryStream ähnlich wie System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream menuClick {
+            get {
+                return ResourceManager.GetStream("menuClick", resourceCulture);
             }
         }
         
@@ -136,6 +165,26 @@ namespace PONG.Properties {
         internal static System.Drawing.Bitmap punkteDisabled {
             get {
                 object obj = ResourceManager.GetObject("punkteDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap punkteDisabledSelected {
+            get {
+                object obj = ResourceManager.GetObject("punkteDisabledSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap punkteSelected {
+            get {
+                object obj = ResourceManager.GetObject("punkteSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
