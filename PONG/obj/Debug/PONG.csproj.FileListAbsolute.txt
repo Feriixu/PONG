@@ -19,4 +19,4 @@ D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.csproj.GenerateResource.cac
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.csproj.CoreCompileInputs.cache
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.exe
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.pdb
-D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.Arena.resources
+D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.Spielfeld.resources

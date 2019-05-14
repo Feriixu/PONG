@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,9 @@ namespace PONG
 {
     public partial class MainMenu : Form
     {
+        private bool endlos;
+        private SoundPlayer menuClick;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -23,6 +27,8 @@ namespace PONG
         public MainMenu()
         {
             InitializeComponent();
+            endlos = false;
+            menuClick = new SoundPlayer(Properties.Resources.menuClick);
         }
 
         private void MainMenu_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
@@ -45,10 +51,54 @@ namespace PONG
         }
 
 
+        private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.einzel;
+        }
 
-        private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.einzel;
         private void PictureBoxEinzelspieler_MouseLeave(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.einzelDisabled;
-        private void PictureBoxMehrspieler_MouseEnter(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.mehr;
+
+        private void PictureBoxMehrspieler_MouseEnter(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.mehr;
+        }
+
         private void PictureBoxMehrspieler_MouseLeave(object sender, EventArgs e) => ((PictureBox)sender).BackgroundImage = Properties.Resources.mehrDisabled;
+
+        private void PictureBoxEndlos_Click(object sender, EventArgs e)
+        {
+            if (!endlos) menuClick.Play();
+            endlos = true;
+            pictureBoxEndlos.BackgroundImage = Properties.Resources.endlos;
+            pictureBoxPunkte.BackgroundImage = Properties.Resources.punkteDisabled;
+        }
+
+        private void PictureBoxPunkte_Click(object sender, EventArgs e)
+        {
+            if (endlos) menuClick.Play();
+            endlos = false;
+            pictureBoxPunkte.BackgroundImage = Properties.Resources.punkte;
+            pictureBoxEndlos.BackgroundImage = Properties.Resources.endlosDisabled;
+        }
+
+        private void PictureBoxXButton_Click(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            this.Close();
+        }
+
+        private void PictureBoxXButton_MouseEnter(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.xButton;
+        }
+
+        private void PictureBoxXButton_MouseLeave(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.xButtonDisabled;
+        }
     }
 }

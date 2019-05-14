@@ -130,17 +130,32 @@
   <data name="endlosDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\endlosDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="endlosDisabledSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\endlosDisabledSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="endlosSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\endlosSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mehr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mehr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mehrDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mehrDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="menuClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuClick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="punkte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\punkte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="punkteDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\punkteDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="punkteDisabledSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\punkteDisabledSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="punkteSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\punkteSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,5 +165,11 @@
   </data>
   <data name="titlegreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titlegreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xButtonDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xButtonDisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
