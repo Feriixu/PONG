@@ -32,10 +32,12 @@
             this.pictureBoxMehrspieler = new System.Windows.Forms.PictureBox();
             this.pictureBoxEndlos = new System.Windows.Forms.PictureBox();
             this.pictureBoxPunkte = new System.Windows.Forms.PictureBox();
+            this.pictureBoxXButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEinzelspieler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMehrspieler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEndlos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPunkte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXButton)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxEinzelspieler
@@ -90,6 +92,20 @@
             this.pictureBoxPunkte.TabStop = false;
             this.pictureBoxPunkte.Click += new System.EventHandler(this.PictureBoxPunkte_Click);
             // 
+            // pictureBoxXButton
+            // 
+            this.pictureBoxXButton.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxXButton.BackgroundImage = global::PONG.Properties.Resources.xButtonDisabled;
+            this.pictureBoxXButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxXButton.Location = new System.Drawing.Point(634, 40);
+            this.pictureBoxXButton.Name = "pictureBoxXButton";
+            this.pictureBoxXButton.Size = new System.Drawing.Size(56, 58);
+            this.pictureBoxXButton.TabIndex = 4;
+            this.pictureBoxXButton.TabStop = false;
+            this.pictureBoxXButton.Click += new System.EventHandler(this.PictureBoxXButton_Click);
+            this.pictureBoxXButton.MouseEnter += new System.EventHandler(this.PictureBoxXButton_MouseEnter);
+            this.pictureBoxXButton.MouseLeave += new System.EventHandler(this.PictureBoxXButton_MouseLeave);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +114,7 @@
             this.BackgroundImage = global::PONG.Properties.Resources.title;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(893, 568);
+            this.Controls.Add(this.pictureBoxXButton);
             this.Controls.Add(this.pictureBoxPunkte);
             this.Controls.Add(this.pictureBoxEndlos);
             this.Controls.Add(this.pictureBoxMehrspieler);
@@ -115,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMehrspieler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEndlos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPunkte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,5 +143,6 @@
         private System.Windows.Forms.PictureBox pictureBoxMehrspieler;
         private System.Windows.Forms.PictureBox pictureBoxEndlos;
         private System.Windows.Forms.PictureBox pictureBoxPunkte;
+        private System.Windows.Forms.PictureBox pictureBoxXButton;
     }
 }

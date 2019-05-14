@@ -148,5 +148,11 @@
   <ItemGroup>
     <None Include="Resources\menuClick.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xButtonDisabled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

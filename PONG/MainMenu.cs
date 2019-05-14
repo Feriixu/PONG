@@ -82,5 +82,23 @@ namespace PONG
             pictureBoxPunkte.BackgroundImage = Properties.Resources.punkte;
             pictureBoxEndlos.BackgroundImage = Properties.Resources.endlosDisabled;
         }
+
+        private void PictureBoxXButton_Click(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            this.Close();
+        }
+
+        private void PictureBoxXButton_MouseEnter(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.xButton;
+        }
+
+        private void PictureBoxXButton_MouseLeave(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            ((PictureBox)sender).BackgroundImage = Properties.Resources.xButtonDisabled;
+        }
     }
 }
