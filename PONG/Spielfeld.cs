@@ -4,42 +4,46 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class Spiel : Form
+    public partial class Spielfeld : Form
     {
-        System.Timers.Timer timer1, timer2;
+        System.Timers.Timer timerGameTick, timerIncreaseSpeed;
 
-        Graphics Draw;
-        SolidBrush sb = new SolidBrush(Color.White);
-        public int ball;
-        public int paddel1;
-        public int paddel2;
+        Graphics graphics;
+        SolidBrush solidBrushWhite = new SolidBrush(Color.White);
 
-        public Spiel()
+        public Spielfeld()
         {
             InitializeComponent();
             gameArena.BackColor = Color.Black;
-            Draw = gameArena.CreateGraphics();
+            graphics = gameArena.CreateGraphics();
 
-            timer1 = new System.Timers.Timer() { Interval = 10 };
-            timer2 = new System.Timers.Timer() { Interval = 3000 };
+            timerGameTick = new System.Timers.Timer() { Interval = 10 };
+            timerIncreaseSpeed = new System.Timers.Timer() { Interval = 3000 };
 
-            timer1.Elapsed += timer1_Tick;
-            timer2.Elapsed += timer2_Tick;
+            timerGameTick.Elapsed += timerGameTick_Tick;
+            timerIncreaseSpeed.Elapsed += timerIncreaseSpeed_Tick;
 
-            timer1.Start();
-            timer2.Start();
+            timerGameTick.Start();
+            timerIncreaseSpeed.Start();
         }
 
-
-        private void timer1_Tick(object sender, EventArgs e)
+        public PongGame PongGame
         {
-            PongGame.DrawIt(Draw);                      //Draws paddles & ball
-            PongGame.MoveBall(timer1);                  //Moves the ball
+            get => default;
+            set
+            {
+            }
+        }
+
+        private void timerGameTick_Tick(object sender, EventArgs e)
+        {
+            PongGame.DrawIt(graphics);                      //Draws paddles & ball
+            PongGame.MoveBall(timerGameTick);                  //Moves the ball
             PongGame.CheckScore();                      //Check if one player scored
             PongGame.CheckIfMoving();                   //Method that check if player is moving up or down the paddle
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Spielfeld_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.S)
             { PongGame.p1movesDown = true; }
@@ -51,7 +55,7 @@ namespace PONG
             { PongGame.p2movesUp = true; }
         }
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        private void Spielfeld_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.S)
             { PongGame.p1movesDown = false; }
@@ -63,7 +67,7 @@ namespace PONG
             { PongGame.p2movesUp = false; }
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timerIncreaseSpeed_Tick(object sender, EventArgs e)
         { PongGame.IncreaseSpeed(); }     //Every 3 seconds, this timer will increase Overall speed
     }
 }

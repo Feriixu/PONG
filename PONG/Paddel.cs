@@ -7,5 +7,13 @@ namespace PONG
 {
     public class Paddel : Spielobjekt
     {
+
+        public bool Links
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

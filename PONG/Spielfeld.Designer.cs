@@ -1,6 +1,6 @@
 ﻿namespace PONG
 {
-    partial class Spiel
+    partial class Spielfeld
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -49,8 +49,8 @@
             this.Controls.Add(this.gameArena);
             this.Name = "Game";
             this.Text = "PONG!";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.gameArena)).EndInit();
             this.ResumeLayout(false);
 

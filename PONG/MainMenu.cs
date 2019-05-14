@@ -16,20 +16,15 @@ namespace PONG
         private bool endlos;
         private SoundPlayer menuClick;
 
+        #region Fenster and jeder Stelle ziehen
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-
-        public MainMenu()
-        {
-            InitializeComponent();
-            endlos = false;
-            menuClick = new SoundPlayer(Properties.Resources.menuClick);
-        }
 
         private void MainMenu_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
@@ -38,6 +33,14 @@ namespace PONG
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+        #endregion
+
+        public MainMenu()
+        {
+            InitializeComponent();
+            endlos = false;
+            menuClick = new SoundPlayer(Properties.Resources.menuClick);
         }
 
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
@@ -49,7 +52,6 @@ namespace PONG
         {
 
         }
-
 
         private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e)
         {
@@ -100,5 +102,8 @@ namespace PONG
             menuClick.Play();
             ((PictureBox)sender).BackgroundImage = Properties.Resources.xButtonDisabled;
         }
+
+        public event EventHandler StartEinzelspieler;
+        public event EventHandler StartMehrspieler;
     }
 }

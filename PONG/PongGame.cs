@@ -19,6 +19,30 @@ namespace PONG
         public static double Xspeed = -1;                   //Beginning Initial speed
         public static double Yspeed = 1;
 
+        public Paddel Paddel2
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Ball Ball
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Paddel Paddel1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void DrawIt(Graphics Draw)
         {   //Draws both paddles and ball
             Draw.Clear(Color.Black);

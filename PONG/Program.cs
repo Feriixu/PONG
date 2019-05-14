@@ -8,6 +8,22 @@ namespace PONG
 {
     static class Program
     {
+        public static MainMenu MainMenu
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static Spielfeld Spielfeld
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -16,12 +32,6 @@ namespace PONG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
-<<<<<<< HEAD
-            Application.Run(new Spiel());
-=======
-            // Application.Run(new Game());
->>>>>>> f7e0131de4265cf1670d0c228f0738cd08a1e6a8
         }
     }
 }
