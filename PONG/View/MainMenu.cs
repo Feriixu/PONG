@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : Form, IMainMenu
     {
         private bool endlos;
         private SoundPlayer menuClick;
@@ -45,7 +45,7 @@ namespace PONG
 
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void PictureBoxMehrspieler_Click(object sender, EventArgs e)
@@ -99,7 +99,6 @@ namespace PONG
 
         private void PictureBoxXButton_MouseLeave(object sender, EventArgs e)
         {
-            menuClick.Play();
             ((PictureBox)sender).BackgroundImage = Properties.Resources.xButtonDisabled;
         }
 

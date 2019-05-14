@@ -47,28 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ball.cs" />
-    <Compile Include="Spielfeld.cs">
+    <Compile Include="Controller\Ball.cs" />
+    <Compile Include="View\IMainMenu.cs" />
+    <Compile Include="View\Spielfeld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Spielfeld.Designer.cs">
+    <Compile Include="View\Spielfeld.Designer.cs">
       <DependentUpon>Spielfeld.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="View\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="View\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paddel.cs" />
-    <Compile Include="PongGame.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Controller\Paddel.cs" />
+    <Compile Include="Controller\PongGame.cs" />
+    <Compile Include="Controller\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spielobjekt.cs" />
-    <EmbeddedResource Include="Spielfeld.resx">
+    <Compile Include="Controller\Spielobjekt.cs" />
+    <EmbeddedResource Include="View\Spielfeld.resx">
       <DependentUpon>Spielfeld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="View\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

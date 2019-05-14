@@ -4,7 +4,7 @@
     <Position X="7.25" Y="2.75" Width="2" />
     <TypeIdentifier>
       <HashCode>gAAAABAAAKAAAAAAAACCAAACAAAAACgAgBAAAAAAAAI=</HashCode>
-      <FileName>Spielfeld.cs</FileName>
+      <FileName>View\Spielfeld.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="PongGame" />
@@ -14,14 +14,15 @@
     <Position X="0.75" Y="1" Width="2.75" />
     <TypeIdentifier>
       <HashCode>TAhAAIBAAiAAEIEwASCAAEESIAAEAAQAIAAAAAAQAAQ=</HashCode>
-      <FileName>MainMenu.cs</FileName>
+      <FileName>View\MainMenu.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.242" />
   </Class>
   <Class Name="PONG.PongGame">
     <Position X="10.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEIkEACAAAAABMCEAAgAACAAAECAAAAgAkKCQAAAIA=</HashCode>
-      <FileName>PongGame.cs</FileName>
+      <FileName>Controller\PongGame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Paddel2" />
@@ -36,7 +37,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Properties.Settings" Collapsed="true">
-    <Position X="19.75" Y="0.5" Width="1.75" />
+    <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
@@ -45,28 +46,28 @@
     <Position X="14.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAgAAAAIABAAABAQCAAQA=</HashCode>
-      <FileName>Spielobjekt.cs</FileName>
+      <FileName>Controller\Spielobjekt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Ball">
     <Position X="13.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Ball.cs</FileName>
+      <FileName>Controller\Ball.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Paddel">
     <Position X="15.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
-      <FileName>Paddel.cs</FileName>
+      <FileName>Controller\Paddel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Program">
     <Position X="4.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>Controller\Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="MainMenu" />

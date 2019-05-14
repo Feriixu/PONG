@@ -12,7 +12,6 @@ D:\Data\Programmieren\repos\PONG\PONG\bin\Debug\PONG.exe.config
 D:\Data\Programmieren\repos\PONG\PONG\bin\Debug\PONG.exe
 D:\Data\Programmieren\repos\PONG\PONG\bin\Debug\PONG.pdb
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.csprojAssemblyReference.cache
-D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.Game.resources
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.MainMenu.resources
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.Properties.Resources.resources
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.csproj.GenerateResource.cache

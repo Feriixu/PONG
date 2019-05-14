@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PONG
 {
-    class Spielobjekt
+    public class Spielobjekt
     {
         public int xPos;
         public int yPos;
