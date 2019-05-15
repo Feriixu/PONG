@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Ball.cs" />
-    <Compile Include="View\IMainMenu.cs" />
     <Compile Include="View\Spielfeld.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,7 +96,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Properties\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\einzel.png" />
@@ -149,6 +151,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\xButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\Interfaces\" />
+    <Folder Include="View\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

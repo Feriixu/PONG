@@ -9,7 +9,6 @@ namespace PONG
         System.Timers.Timer timerGameTick, timerIncreaseSpeed;
 
         Graphics graphics;
-        SolidBrush solidBrushWhite = new SolidBrush(Color.White);
 
         public Spielfeld()
         {

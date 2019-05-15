@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class MainMenu : Form, IMainMenu
+    public partial class MainMenu : Form
     {
         private bool endlos;
         private SoundPlayer menuClick;

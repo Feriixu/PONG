@@ -15,5 +15,21 @@ namespace PONG
             {
             }
         }
+
+        public int Breite
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int Höhe
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
