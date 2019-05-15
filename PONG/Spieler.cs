@@ -14,7 +14,7 @@ namespace PONG
             Paddel = new Paddel();
         }
 
-        public Spieler(SpielerPosition position)
+        public Spieler(SpielerPosition position, int xMax, int yMax)
         {
             throw new System.NotImplementedException();
         }
