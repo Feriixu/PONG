@@ -7,6 +7,18 @@ namespace PONG
 {
     public class Spieler
     {
+        public Spieler()
+        {
+            throw new System.NotImplementedException();
+
+            Paddel = new Paddel();
+        }
+
+        public Spieler(SpielerPosition position)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Paddel Paddel
         {
             get => default;
@@ -23,9 +35,20 @@ namespace PONG
             }
         }
 
-        public void GetMove()
+        public int Punkte
         {
-            throw new System.NotImplementedException();
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int Name
+        {
+            get => default;
+            set
+            {
+            }
         }
     }
 }

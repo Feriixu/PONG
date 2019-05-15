@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gameArena = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gameArena)).BeginInit();
+            this.pictureBoxSpielfeld = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpielfeld)).BeginInit();
             this.SuspendLayout();
             // 
-            // gameArena
+            // pictureBoxSpielfeld
             // 
-            this.gameArena.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gameArena.Location = new System.Drawing.Point(0, 0);
-            this.gameArena.Name = "gameArena";
-            this.gameArena.Size = new System.Drawing.Size(584, 561);
-            this.gameArena.TabIndex = 0;
-            this.gameArena.TabStop = false;
+            this.pictureBoxSpielfeld.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxSpielfeld.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxSpielfeld.Name = "pictureBoxSpielfeld";
+            this.pictureBoxSpielfeld.Size = new System.Drawing.Size(584, 561);
+            this.pictureBoxSpielfeld.TabIndex = 0;
+            this.pictureBoxSpielfeld.TabStop = false;
             // 
-            // Game
+            // Spielfeld
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.gameArena);
-            this.Name = "Game";
+            this.Controls.Add(this.pictureBoxSpielfeld);
+            this.Name = "Spielfeld";
             this.Text = "PONG!";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.gameArena)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpielfeld)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox gameArena;
+        private System.Windows.Forms.PictureBox pictureBoxSpielfeld;
     }
 }
 

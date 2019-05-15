@@ -8,6 +8,11 @@ namespace PONG
 {
     public class Spielobjekt
     {
+        public Spielobjekt() : this(0, 0, 0, 0)
+        {
+            
+        }
+
         public Spielobjekt(int xPos, int yPos, float xVel, float yVel)
         {
             this.XPos = xPos;
@@ -16,7 +21,7 @@ namespace PONG
             this.YVel = yVel;
         }
 
-        public Spielobjekt() : this(0, 0, 0, 0)
+        public Spielobjekt(int xMax, int yMax) : this(xMax / 2, yMax / 2, 0, 0)
         {
         }
 

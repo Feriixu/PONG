@@ -51,6 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Ball.cs" />
+    <Compile Include="Enums\PaddelBewegung.cs" />
+    <Compile Include="Spieler.cs" />
+    <Compile Include="Enums\SpielerPosition.cs" />
+    <Compile Include="Enums\Spielmodus.cs" />
     <Compile Include="View\Spielfeld.cs">
       <SubType>Form</SubType>
     </Compile>
