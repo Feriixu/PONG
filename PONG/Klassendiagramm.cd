@@ -19,9 +19,9 @@
   </Class>
   <Class Name="PONG.PongGame">
     <Position X="9.5" Y="8" Width="4.5" />
-    <AssociationLine Name="Spielmodus" Type="PONG.Spielmodus">
+    <AssociationLine Name="PaddelBewegung1" Type="PONG.PaddelBewegung">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.098" Y="0.194" />
+        <Position X="0.03" Y="0.44" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="PaddelBewegung2" Type="PONG.PaddelBewegung">
@@ -29,9 +29,9 @@
         <Position X="0.134" Y="0.149" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="PaddelBewegung1" Type="PONG.PaddelBewegung">
+    <AssociationLine Name="Spielmodus" Type="PONG.Spielmodus">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.03" Y="0.44" />
+        <Position X="0.098" Y="0.194" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -39,12 +39,12 @@
       <FileName>Controller\PongGame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Spielmodus" />
-      <Property Name="Spieler2" />
-      <Property Name="Spieler1" />
-      <Property Name="PaddelBewegung2" />
-      <Property Name="PaddelBewegung1" />
       <Property Name="Ball" />
+      <Property Name="Spieler1" />
+      <Property Name="Spieler2" />
+      <Property Name="PaddelBewegung1" />
+      <Property Name="PaddelBewegung2" />
+      <Property Name="Spielmodus" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PONG.Properties.Resources">
@@ -98,8 +98,8 @@
       <FileName>Spieler.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="SpielerPosition" />
       <Property Name="Paddel" />
+      <Property Name="SpielerPosition" />
     </ShowAsAssociation>
   </Class>
   <Enum Name="PONG.SpielerPosition">
