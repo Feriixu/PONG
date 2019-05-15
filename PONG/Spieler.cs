@@ -5,10 +5,9 @@ using System.Text;
 
 namespace PONG
 {
-    public class Paddel : Spielobjekt
+    public class Spieler
     {
-
-        public bool Links
+        public Paddel Paddel
         {
             get => default;
             set
@@ -16,7 +15,7 @@ namespace PONG
             }
         }
 
-        public int Breite
+        public SpielerPosition SpielerPosition
         {
             get => default;
             set
@@ -24,23 +23,7 @@ namespace PONG
             }
         }
 
-        public int Höhe
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public PaddelBewegung PaddelBewegung
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public void Update()
+        public void GetMove()
         {
             throw new System.NotImplementedException();
         }

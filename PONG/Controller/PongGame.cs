@@ -6,26 +6,15 @@ namespace PONG
 {
     public class PongGame
     {
-        public static Rectangle paddle1 = new Rectangle(14, 180, 20, 100);
-        public static Rectangle paddle2 = new Rectangle(566, 180, 20, 100);
-        public static Rectangle ball = new Rectangle(290, 115, 16, 16);
-        static Font Drawfont = new Font("Arial", 40);
-        public static bool p1movesUp, p1movesDown, p2movesUp, p2movesDown;
-        public static SolidBrush sb = new SolidBrush(Color.White);
-        public static double p1p;                           //Double that will store player 1 score
-        public static double p2p;                           //Double that will store player 2 score
-        static int RandoMin = 1;                            //Those 2 random integers are used to randomize ball directions
-        static int RandoMax = 3;                            //in the Randomize() method to avoid repetition of ball movement
-        public static double Xspeed = -1;                   //Beginning Initial speed
-        public static double Yspeed = 1;
+        //public static Rectangle paddle1 = new Rectangle(14, 180, 20, 100);
+        //public static Rectangle paddle2 = new Rectangle(566, 180, 20, 100);
+        //public static Rectangle ball = new Rectangle(290, 115, 16, 16);
+        Font Drawfont = new Font("Arial", 40);
+        public static SolidBrush Brush = new SolidBrush(Color.White);
+        private int timerGameTick;
 
-        public Paddel Paddel2
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        //public static double p1p;                           //Double that will store player 1 score
+        //public static double p2p;                           //Double that will store player 2 score
 
         public Ball Ball
         {
@@ -35,7 +24,15 @@ namespace PONG
             }
         }
 
-        public Paddel Paddel1
+        public Spieler Spieler1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Spieler Spieler2
         {
             get => default;
             set
@@ -46,31 +43,30 @@ namespace PONG
         public static void DrawIt(Graphics Draw)
         {   //Draws both paddles and ball
             Draw.Clear(Color.Black);
-            Draw.FillRectangle(sb, paddle2);
-            Draw.FillRectangle(sb, paddle1);
-            Draw.FillRectangle(sb, ball);
+            Draw.FillRectangle(Brush, paddle2);
+            Draw.FillRectangle(Brush, Paddel1);
+            Draw.FillRectangle(Brush, ball);
             //Draw Score
-            Draw.DrawString(p1p.ToString(), Drawfont, sb, 180, 10);
-            Draw.DrawString(p2p.ToString(), Drawfont, sb, 380, 10);
+            Draw.DrawString(p1p.ToString(), Drawfont, Brush, 180, 10);
+            Draw.DrawString(p2p.ToString(), Drawfont, Brush, 380, 10);
         }
 
-        public static void CheckIfMoving()                      //If player press the key to move the paddle, this method
+        public void CheckIfMoving()                      //If player press the key to move the paddle, this method
         {                                                       //changes the Y position of the paddle Accordingly
             if (p1movesUp == true)
-            { int z = paddle1.Y <= 0 ? paddle1.Y = 0 : paddle1.Y -= 3; }
+            { int z = Paddel1.YPos <= 0 ? Paddel1.YPos = 0 : Paddel1.YPos -= 3; }
             if (p1movesDown == true)
-            { int z = paddle1.Y >= 381 ? paddle1.Y = 381 : paddle1.Y += 3; }
+            { int z = Paddel1.YPos >= 381 ? Paddel1.YPos = 381 : Paddel1.YPos += 3; }
             if (p2movesUp == true)
-            { int z = paddle2.Y <= 0 ? paddle2.Y = 0 : paddle2.Y -= 3; }
+            { int z = Paddel2.YPos <= 0 ? Paddel2.YPos = 0 : Paddel2.YPos -= 3; }
             if (p2movesDown == true)
-            { int z = paddle2.Y >= 381 ? paddle2.Y = 381 : paddle2.Y += 3; }
+            { int z = Paddel2.YPos >= 381 ? Paddel2.YPos = 381 : Paddel2.YPos += 3; }
         }
 
-        public static void Restart()                            //Method called upon player scoring, to reset speed values
+        public void Restart()                            //Method called upon player scoring, to reset speed values
         {                                                       //and ball position
-            ball.X = 290; Yspeed = 1;
-            ball.Y = 115; RandoMin = 1;
-            Xspeed = -1; RandoMax = 3;
+            Ball.XPos = 290; Ball.YVel = 1;
+            Ball.YPos = 115; Ball.XVel = -1;
         }
 
         public static void CheckScore()                         //Check if any player has scored, and increase p1p accordingly

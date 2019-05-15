@@ -45,12 +45,12 @@ namespace PONG
 
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
         {
-
+            StartEinzelspieler?.Invoke(this, EventArgs.Empty);
         }
 
         private void PictureBoxMehrspieler_Click(object sender, EventArgs e)
         {
-
+            StartMehrspieler?.Invoke(this, EventArgs.Empty);
         }
 
         private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e)
@@ -87,7 +87,6 @@ namespace PONG
 
         private void PictureBoxXButton_Click(object sender, EventArgs e)
         {
-            menuClick.Play();
             this.Close();
         }
 

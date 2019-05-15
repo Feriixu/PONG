@@ -8,12 +8,16 @@ namespace PONG
 {
     public class Spielobjekt
     {
-        internal Spielobjekt(int xPos, int yPos, float xVel, float yVel)
+        public Spielobjekt(int xPos, int yPos, float xVel, float yVel)
         {
             this.XPos = xPos;
             this.YPos = yPos;
             this.XVel = xVel;
             this.YVel = yVel;
+        }
+
+        public Spielobjekt() : this(0, 0, 0, 0)
+        {
         }
 
         public int XPos
