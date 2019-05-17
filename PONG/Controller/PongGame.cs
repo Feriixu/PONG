@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public class PongGame
+    public class PongGame : IPongGame
     {
         //public static Rectangle paddle1 = new Rectangle(14, 180, 20, 100);
         //public static Rectangle paddle2 = new Rectangle(566, 180, 20, 100);
@@ -160,6 +160,7 @@ namespace PONG
 
         public void timerIncreaseSpeedTick_Tick()
         {
+            Ball.Update();
             throw new System.NotImplementedException();
         }
 

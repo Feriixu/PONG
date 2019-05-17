@@ -18,7 +18,7 @@ namespace PONG
             this.XPos = xPos;
             this.YPos = yPos;
             this.XVel = xVel;
-            this.YVel = yVel;
+            this.YVel = yVel;     
         }
 
         public Spielobjekt(int xMax, int yMax) : this(xMax / 2, yMax / 2, 0, 0)

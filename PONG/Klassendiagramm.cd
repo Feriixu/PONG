@@ -63,21 +63,21 @@
     <Position X="13" Y="1.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAABAACAAAA=</HashCode>
-      <FileName>Controller\Spielobjekt.cs</FileName>
+      <FileName>Model\Spielobjekt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Ball">
     <Position X="11.5" Y="5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controller\Ball.cs</FileName>
+      <FileName>Model\Ball.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Paddel">
     <Position X="14.75" Y="5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAACAAAAAAACACAAAAAACAAAAAAAAAA=</HashCode>
-      <FileName>Controller\Paddel.cs</FileName>
+      <FileName>Model\Paddel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PONG.Program">
@@ -95,7 +95,7 @@
     <Position X="15.25" Y="8.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAQAAAAAAAAAQAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Spieler.cs</FileName>
+      <FileName>Model\Spieler.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Paddel" />
