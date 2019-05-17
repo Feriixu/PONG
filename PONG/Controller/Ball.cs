@@ -20,7 +20,7 @@ namespace PONG
 
         public int Radius
         {
-            get => default;
+            get => Radius;
             set
             {
             }

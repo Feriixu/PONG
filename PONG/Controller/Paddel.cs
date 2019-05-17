@@ -18,17 +18,20 @@ namespace PONG
             throw new System.NotImplementedException();
         }
 
+
         public bool Links
         {
-            get => default;
+            get => Links;
             set
             {
+                if (value)
+                    Links = value;
             }
         }
 
         public int Breite
         {
-            get => default;
+            get => Breite;
             set
             {
             }
@@ -36,7 +39,7 @@ namespace PONG
 
         public int Höhe
         {
-            get => default;
+            get => Höhe;
             set
             {
             }

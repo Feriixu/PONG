@@ -14,7 +14,7 @@ namespace PONG
 
         public PongGame PongGame
         {
-            get => default;
+            get => PongGame;
             set
             {
             }

@@ -10,7 +10,7 @@ namespace PONG
     {
         public static MainMenu MainMenu
         {
-            get => default;
+            get => MainMenu;
             set
             {
             }
@@ -18,7 +18,7 @@ namespace PONG
 
         public static Spielfeld Spielfeld
         {
-            get => default;
+            get => Spielfeld;
             set
             {
             }

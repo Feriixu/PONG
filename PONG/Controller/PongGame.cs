@@ -29,7 +29,7 @@ namespace PONG
 
         private Ball Ball
         {
-            get => default;
+            get => Ball;
             set
             {
             }
@@ -37,7 +37,7 @@ namespace PONG
 
         private Spieler Spieler1
         {
-            get => default;
+            get => Spieler1;
             set
             {
             }
@@ -45,7 +45,7 @@ namespace PONG
 
         private Spieler Spieler2
         {
-            get => default;
+            get => Spieler2;
             set
             {
             }
@@ -53,7 +53,7 @@ namespace PONG
 
         private PaddelBewegung PaddelBewegung1
         {
-            get => default;
+            get => PaddelBewegung1;
             set
             {
             }
@@ -61,7 +61,7 @@ namespace PONG
 
         private PaddelBewegung PaddelBewegung2
         {
-            get => default;
+            get => PaddelBewegung2;
             set
             {
             }
@@ -69,7 +69,7 @@ namespace PONG
 
         private Spielmodus Spielmodus
         {
-            get => default;
+            get => Spielmodus;
             set
             {
             }

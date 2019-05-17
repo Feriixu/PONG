@@ -27,7 +27,7 @@ namespace PONG
 
         public int XPos
         {
-            get => default;
+            get => XPos;
             set
             {
             }
@@ -35,7 +35,7 @@ namespace PONG
 
         public int YPos
         {
-            get => default;
+            get => YPos;
             set
             {
             }
@@ -43,7 +43,7 @@ namespace PONG
 
         public float XVel
         {
-            get => default;
+            get => XVel;
             set
             {
             }
@@ -51,7 +51,7 @@ namespace PONG
 
         public float YVel
         {
-            get => default;
+            get => YVel;
             set
             {
             }

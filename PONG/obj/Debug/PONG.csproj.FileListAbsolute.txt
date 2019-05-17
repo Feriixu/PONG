@@ -19,3 +19,14 @@ D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.csproj.CoreCompileInputs.ca
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.exe
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.pdb
 D:\Data\Programmieren\repos\PONG\PONG\obj\Debug\PONG.Spielfeld.resources
+W:\repos\PONG\PONG\obj\Debug\PONG.csprojAssemblyReference.cache
+W:\repos\PONG\PONG\obj\Debug\PONG.Spielfeld.resources
+W:\repos\PONG\PONG\obj\Debug\PONG.MainMenu.resources
+W:\repos\PONG\PONG\obj\Debug\PONG.Properties.Resources.resources
+W:\repos\PONG\PONG\obj\Debug\PONG.csproj.GenerateResource.cache
+W:\repos\PONG\PONG\obj\Debug\PONG.csproj.CoreCompileInputs.cache
+W:\repos\PONG\PONG\obj\Debug\PONG.exe
+W:\repos\PONG\PONG\obj\Debug\PONG.pdb
+W:\repos\PONG\PONG\bin\Debug\PONG.exe.config
+W:\repos\PONG\PONG\bin\Debug\PONG.exe
+W:\repos\PONG\PONG\bin\Debug\PONG.pdb

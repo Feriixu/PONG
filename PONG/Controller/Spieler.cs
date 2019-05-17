@@ -21,7 +21,7 @@ namespace PONG
 
         public Paddel Paddel
         {
-            get => default;
+            get => Paddel;
             set
             {
             }
@@ -29,7 +29,7 @@ namespace PONG
 
         public SpielerPosition SpielerPosition
         {
-            get => default;
+            get => SpielerPosition;
             set
             {
             }
@@ -37,7 +37,7 @@ namespace PONG
 
         public int Punkte
         {
-            get => default;
+            get => Punkte;
             set
             {
             }
@@ -45,7 +45,7 @@ namespace PONG
 
         public int Name
         {
-            get => default;
+            get => Name;
             set
             {
             }
