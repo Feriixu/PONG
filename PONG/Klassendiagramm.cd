@@ -12,6 +12,13 @@
   </Class>
   <Class Name="PONG.MainMenu">
     <Position X="0.5" Y="0.5" Width="4.5" />
+    <NestedTypes>
+      <Delegate Name="PONG.MainMenu.MainMenuEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>View\MainMenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>TAhAAIBAAiAAEIEwASCAAEESIAAEAAQAIAAAAAAQAAQ=</HashCode>
       <FileName>View\MainMenu.cs</FileName>
@@ -29,13 +36,13 @@
         <Position X="0.134" Y="0.149" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="Spielmodus" Type="PONG.Spielmodus">
+    <AssociationLine Name="Punktemodus" Type="PONG.Punktemodus">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.098" Y="0.194" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIASBAIAAQECCAAAgAAAQAAgABACAAAAQIA=</HashCode>
+      <HashCode>AAAAAAAAAIASBAIAAAECCAQEgAAAQAAgABACAAAAQIA=</HashCode>
       <FileName>Controller\PongGame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -44,7 +51,8 @@
       <Property Name="Spieler2" />
       <Property Name="PaddelBewegung1" />
       <Property Name="PaddelBewegung2" />
-      <Property Name="Spielmodus" />
+      <Property Name="Punktemodus" />
+      <Property Name="Spielermodus" />
     </ShowAsAssociation>
   </Class>
   <Class Name="PONG.Properties.Resources">
@@ -83,7 +91,7 @@
   <Class Name="PONG.Program">
     <Position X="6" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAEAQIAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Controller\Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -110,17 +118,24 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="PONG.PaddelBewegung">
-    <Position X="10.5" Y="13" Width="1.5" />
+    <Position X="9.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAEAA=</HashCode>
       <FileName>Enums\PaddelBewegung.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="PONG.Spielmodus">
-    <Position X="12.5" Y="13" Width="1.5" />
+  <Enum Name="PONG.Punktemodus">
+    <Position X="11.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\Spielmodus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PONG.Spielermodus">
+    <Position X="13" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Spielermodus.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

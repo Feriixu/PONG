@@ -32,7 +32,26 @@ namespace PONG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            MainMenu = new MainMenu();
+            MainMenu.StartEinzelspieler += StartEinzelspieler;
+            MainMenu.StartMehrspieler += StartMehrspieler;
+            MainMenu.Show();
+        }
+
+        private static void StartMehrspieler(object sender, MainMenuEventArgs e)
+        {
+            MainMenu.Hide();
+            Spielfeld = new Spielfeld(e.Spielmodus, false);
+            Spielfeld.ShowDialog();
+            MainMenu.Show();
+        }
+
+        private static void StartEinzelspieler(object sender, MainMenuEventArgs e)
+        {
+            MainMenu.Hide();
+            Spielfeld = new Spielfeld(e.Spielmodus, true);
+            Spielfeld.ShowDialog();
+            MainMenu.Show();
         }
     }
 }

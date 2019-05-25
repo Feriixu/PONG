@@ -45,12 +45,14 @@ namespace PONG
 
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
         {
-            StartEinzelspieler?.Invoke(this, EventArgs.Empty);
+            var eventArgs = new MainMenuEventArgs(Spielermodus.Einzelspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
+            StartEinzelspieler?.Invoke(this, eventArgs);
         }
 
         private void PictureBoxMehrspieler_Click(object sender, EventArgs e)
         {
-            StartMehrspieler?.Invoke(this, EventArgs.Empty);
+            var eventArgs = new MainMenuEventArgs(Spielermodus.Mehrspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
+            StartMehrspieler?.Invoke(this, eventArgs);
         }
 
         private void PictureBoxEinzelspieler_MouseEnter(object sender, EventArgs e)
@@ -103,5 +105,19 @@ namespace PONG
 
         public event EventHandler StartEinzelspieler;
         public event EventHandler StartMehrspieler;
+        public delegate void MainMenuEventHandler(object sender, MainMenuEventArgs a);
+
+    }
+
+    public class MainMenuEventArgs : EventArgs
+    {
+        public MainMenuEventArgs(Spielermodus sM, Punktemodus pM)
+        {
+            Spielermodus = sM;
+            Punktemodus = pM;
+        }
+
+        public Punktemodus Punktemodus { get; }
+        public Spielermodus Spielermodus { get; }
     }
 }

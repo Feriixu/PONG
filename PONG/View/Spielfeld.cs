@@ -6,7 +6,7 @@ namespace PONG
 {
     public partial class Spielfeld : Form
     {
-        public Spielfeld(Spielmodus modus, bool ki)
+        public Spielfeld(Punktemodus modus, bool ki)
         {
             InitializeComponent();
             pictureBoxSpielfeld.BackColor = Color.Black;

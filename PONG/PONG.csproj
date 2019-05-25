@@ -70,6 +70,7 @@
     <Compile Include="Model\Spieler.cs" />
     <Compile Include="Enums\SpielerPosition.cs" />
     <Compile Include="Enums\Spielmodus.cs" />
+    <Compile Include="Spielermodus.cs" />
     <Compile Include="View\Spielfeld.cs">
       <SubType>Form</SubType>
     </Compile>

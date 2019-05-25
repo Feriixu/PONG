@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public class PongGame : IPongGame
+    public class PongGame
     {
         //public static Rectangle paddle1 = new Rectangle(14, 180, 20, 100);
         //public static Rectangle paddle2 = new Rectangle(566, 180, 20, 100);
@@ -19,7 +19,7 @@ namespace PONG
 
         public event EventHandler SpielVorbei;
 
-        public PongGame(Spielmodus modus, bool ki, PictureBox spielfeld)
+        public PongGame(Punktemodus modus, bool ki, PictureBox spielfeld)
         {
             throw new System.NotImplementedException();
         }
@@ -67,9 +67,17 @@ namespace PONG
             }
         }
 
-        private Spielmodus Spielmodus
+        private Punktemodus Punktemodus
         {
-            get => Spielmodus;
+            get => Punktemodus;
+            set
+            {
+            }
+        }
+
+        public Spielermodus Spielermodus
+        {
+            get => default;
             set
             {
             }

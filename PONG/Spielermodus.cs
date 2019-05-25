@@ -5,9 +5,9 @@ using System.Text;
 
 namespace PONG
 {
-    public enum Punktemodus
+    public enum Spielermodus
     {
-        Punkte,
-        Endlos
+        Einzelspieler,
+        Mehrspieler
     }
 }
