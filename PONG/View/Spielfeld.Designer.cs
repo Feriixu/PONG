@@ -47,7 +47,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.pictureBoxSpielfeld);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Spielfeld";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PONG!";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Spielfeld_KeyUp);

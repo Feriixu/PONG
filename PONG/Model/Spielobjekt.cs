@@ -25,42 +25,9 @@ namespace PONG
         {
         }
 
-        public int XPos
-        {
-            get => XPos;
-            set
-            {
-            }
-        }
-
-        public int YPos
-        {
-            get => YPos;
-            set
-            {
-            }
-        }
-
-        public float XVel
-        {
-            get => XVel;
-            set
-            {
-            }
-        }
-
-        public float YVel
-        {
-            get => YVel;
-            set
-            {
-            }
-        }
-
-        public void Update()
-        {
-            this.XPos = Convert.ToInt32(this.XPos + this.XVel);
-            this.YPos = Convert.ToInt32(this.YPos + this.YVel);
-        }
+        protected float XPos;
+        protected float YPos;
+        protected float XVel;
+        protected float YVel;
     }
 }
