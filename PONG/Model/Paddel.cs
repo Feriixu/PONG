@@ -14,7 +14,7 @@ namespace PONG
         public Paddel(int xMax, int yMax, SpielerPosition position)
         {
             // Höhe, breite und yMax setzen
-            this.höhe = 200;
+            this.höhe = 120;
             this.breite = 20;
             this.yMax = yMax;
             this.position = position;
