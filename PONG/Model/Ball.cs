@@ -16,7 +16,7 @@ namespace PONG
             this.yMax = yMax;
             Random r = new Random();
 
-            this.XVel = r.Next(0, 2) == 0 ? -2 : 2;
+            this.XVel = r.Next(0, 2) == 0 ? -3 : 3;
             this.YVel = 0;
         }
 
@@ -36,7 +36,7 @@ namespace PONG
         {
             // Kollision abfragen und reflektieren
             if (this.XPos < 0 || this.XPos + this.Size > this.xMax)
-                return ((this.XPos < 0) ? -1 : 1);
+                return ((this.XPos < 0) ? 1 : -1);
             if (this.YPos < 0 || this.YPos + this.Size > this.yMax)
                 this.YVel *= -1;
 
@@ -45,12 +45,16 @@ namespace PONG
             if (result1)
             {
                 this.XVel *= -1;
+                Random r = new Random();
+                this.YVel += (float)r.NextDouble() - 0.5F;
             }
 
             bool result2 = spieler2.Paddel.Kollidieren(this.XPos, this.YPos, this.Size,  out var angle2);
             if (result2)
             {
                 this.XVel *= -1;
+                Random r = new Random();
+                this.YVel += (float)r.NextDouble() - 0.5F;
             }
 
             this.XPos += this.XVel;
@@ -73,7 +77,7 @@ namespace PONG
 
             Random r = new Random();
 
-            this.XVel = r.Next(0, 2) == 0 ? -2 : 2;
+            this.XVel = r.Next(0, 2) == 0 ? -3 : 3;
             this.YVel = 0;
 
         }

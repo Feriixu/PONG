@@ -67,7 +67,7 @@ namespace PONG
 
         private void timerGameTick_Tick(object sender, EventArgs e)
         {
-            // Positionen Updaten
+            // Positionen Updaten und Wand kollision berücksichtigen
             var playerWon = this.ball.UpdatePos();
             switch (playerWon)
             {
