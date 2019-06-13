@@ -73,7 +73,7 @@ namespace PONG
             this.spieler2.UpdatePos();
 
             // Alles zeichnen
-            //this.graphics.Clear(Color.Black);
+            this.graphics.Clear(Color.Black);
             this.ball.Zeichnen(this.graphics);
             this.spieler1.Zeichnen(this.graphics);
             this.spieler2.Zeichnen(this.graphics);
