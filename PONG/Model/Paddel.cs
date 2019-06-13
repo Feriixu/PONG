@@ -62,20 +62,20 @@ namespace PONG
             }
         }
 
-        public float Kollidieren(int x, int y, int ballSize)
+        public float Kollidieren(float x, float y, int ballSize)
         {
             switch (this.position)
             {
                 case SpielerPosition.Links:
                     if (x <= this.XPos + this.breite)
                     {
-                        return this.YPos - y;
+                        return this.YPos + (this.höhe / 2) - y + (ballSize / 2) - this.höhe / 2;
                     }
                     break;
                 case SpielerPosition.Rechts:
                     if (x + ballSize >= this.XPos)
                     {
-                        return this.YPos - y;
+                        return this.YPos + (this.höhe / 2) - y + (ballSize / 2) - this.höhe / 2;
                     }
                     break;
             }
