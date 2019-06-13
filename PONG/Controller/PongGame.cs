@@ -60,31 +60,6 @@ namespace PONG
         private readonly Spielermodus spielermodus;
 
         private void Reset() => throw new System.NotImplementedException();//and ball position
-<<<<<<< HEAD
-
-        private void PunktestandPrüfen() => throw new NotImplementedException();
-
-        public void SpielerInput(SpielerPosition spieler, PaddelBewegung richtung) => throw new System.NotImplementedException();
-
-        private void timerGameTick_Tick(object sender, EventArgs e)
-        {
-            // Positionen Updaten
-            this.ball.UpdatePos();
-            this.spieler1.UpdatePos();
-            this.spieler2.UpdatePos();
-
-            // Alles zeichnen
-            this.graphics.Clear(Color.Black);
-            this.ball.Zeichnen(this.graphics);
-            this.spieler1.Zeichnen(this.graphics);
-            this.spieler2.Zeichnen(this.graphics);
-
-            //this.PunktestandPrüfen();
-        }
-
-        private void TimerIncreaseSpeedTick_Tick(object sender, EventArgs e)
-        {
-=======
 
         private void PunktestandPrüfen() => throw new NotImplementedException();
 
@@ -111,7 +86,6 @@ namespace PONG
 
         private void TimerIncreaseSpeedTick_Tick(object sender, EventArgs e)
         {
->>>>>>> 290b9384962e75e077b2e1e2650e13c8260c7967
             this.ball.IncreaseSpeed();
         }
 
