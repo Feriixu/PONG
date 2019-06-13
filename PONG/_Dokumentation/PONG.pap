@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="3CD40AC28232482A">
+  <PROJECT FORMAT="1.00" NAME="PONG" AUTHOR="Mike" CREATED="2019.05.14 17:33:51" MODIFIED="2019.05.15 13:00:12">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="PONG" CREATED="2019.05.14 17:33:59" MODIFIED="2019.05.15 13:00:12">
+        <LAYOUT FORMAT="1.00" COLUMNS="4" ROWS="20">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="283">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="255">
+                <TEXT><![CDATA[Ball wird in der Mitte plaziert]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="132">
+                <TEXT><![CDATA[+1 Punkt für den entsprechenden Spieler]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[PONG]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="267">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="252">
+                <TEXT><![CDATA[Auswahl von 
+Punkte / Endlos Modus
+Einzelspieler / Mehrspieler]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[Grafiken werden geladen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="114">
+                <TEXT><![CDATA[Ball steht in der Mitte still]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="115">
+                <TEXT><![CDATA[Warten auf erste Eingabe vom Anweder]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="116">
+                <TEXT><![CDATA[Ball bewegt sich zufällig in eine Richtung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="117" ASSOCIATE="122">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="118">
+                <TEXT><![CDATA[Eingabe des Anwenders um Paddel zu steuern
+Wenn Einzelspieler -> KI bewegt sich entsprechend]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="291">
+                <TEXT><![CDATA[Paddel bewegen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="290">
+                <TEXT><![CDATA[Ball bewegen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="293">
+                <TEXT><![CDATA[Paddel Kollision?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="299">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="121">
+                <TEXT><![CDATA[Wand Kollision?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="304">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="16">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="271">
+                <TEXT><![CDATA[Ball und Paddel zeichnen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="17">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="122" ASSOCIATE="117">
+                <TEXT><![CDATA[Wenn endlos -> bis Spiel beendet wird
+Wenn Punkte -> bis ein Spieler 10 Punkte erreicht hat]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="18">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="259">
+                <TEXT><![CDATA[Beenden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="295">
+                <TEXT><![CDATA[Ball entsprechend seiner position relativ zum Paddel reflektieren]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="297">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="14">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="292">
+                <TEXT><![CDATA[Ball wird reflektiert]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="302">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="2">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="265">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="18">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="263">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="268" FROM="267" TO="252" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="287" FROM="283" TO="116" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="254" FROM="252" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="123" FROM="113" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="124" FROM="115" TO="116" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="125" FROM="116" TO="117" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="126" FROM="117" TO="118" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="128" FROM="291" TO="290" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="129" FROM="290" TO="293" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="279" FROM="121" TO="292" TEXT="Decke, Boden berührt" />
+          <CONNECTION FORMAT="1.00" ID="305" FROM="304" TO="271" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="127" FROM="118" TO="291" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="278" FROM="121" TO="132" TEXT="Links, Rechts berührt" />
+          <CONNECTION FORMAT="1.00" ID="289" FROM="132" TO="255" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="251" FROM="122" TO="259" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="244" FROM="114" TO="115" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="260" FROM="259" TO="2" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="267" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="262" FROM="259" TO="263" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="269" FROM="265" TO="267" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="270" FROM="263" TO="265" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="272" FROM="271" TO="122" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="288" FROM="255" TO="283" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="300" FROM="299" TO="121" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="296" FROM="293" TO="295" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="298" FROM="295" TO="297" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="294" FROM="293" TO="299" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="301" FROM="297" TO="299" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="303" FROM="292" TO="302" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="273" FROM="121" TO="304" TEXT="keine Kollision" />
+          <CONNECTION FORMAT="1.00" ID="306" FROM="302" TO="304" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
