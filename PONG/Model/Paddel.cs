@@ -9,7 +9,7 @@ namespace PONG
     public class Paddel : Spielobjekt, IPaddel
     {
         public Paddel() : this(0, 0, 0) { }
-
+        private SpielerPosition position;
 
         public Paddel(int xMax, int yMax, SpielerPosition position)
         {
@@ -17,6 +17,7 @@ namespace PONG
             this.höhe = 200;
             this.breite = 20;
             this.yMax = yMax;
+            this.position = position;
 
             // Position entsprechen des Spielers einstellen
             switch (position)
@@ -40,7 +41,7 @@ namespace PONG
         {
             // Geschwindigkeit auf position addieren wenn das paddel nicht am rand ist
             if (this.YPos >= 0 && this.YVel < 0 || this.YPos + this.höhe <= yMax && this.YVel > 0)
-                    this.YPos += this.YVel;
+                this.YPos += this.YVel;
         }
 
         public void Zeichnen(Graphics g) => g.FillRectangle(Brushes.White, new Rectangle((int)Math.Round(this.XPos), (int)Math.Round(this.YPos), this.breite, this.höhe));
@@ -59,6 +60,27 @@ namespace PONG
                     this.YVel = 0;
                     break;
             }
+        }
+
+        public float Kollidieren(int x, int y, int ballSize)
+        {
+            switch (this.position)
+            {
+                case SpielerPosition.Links:
+                    if (x <= this.XPos + this.breite)
+                    {
+                        return this.YPos - y;
+                    }
+                    break;
+                case SpielerPosition.Rechts:
+                    if (x + ballSize >= this.XPos)
+                    {
+                        return this.YPos - y;
+                    }
+                    break;
+            }
+
+            return -1;
         }
     }
 }
