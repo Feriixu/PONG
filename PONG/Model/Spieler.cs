@@ -2,7 +2,7 @@
 
 namespace PONG
 {
-    public class Spieler : ISpieler, ISpieler
+    public class Spieler : ISpieler
     {
         public IPaddel Paddel => this.paddel;
         private readonly IPaddel paddel;
