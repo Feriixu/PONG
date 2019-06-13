@@ -7,6 +7,6 @@ namespace PONG
         void UpdatePos();
         void Zeichnen(Graphics g);
         void SetMov(PaddelBewegung mov);
-        float Kollidieren(float x, float y, int ballSize);
+        void Kollidieren(int x, int y);
     }
 }

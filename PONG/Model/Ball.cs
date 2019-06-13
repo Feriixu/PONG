@@ -40,18 +40,10 @@ namespace PONG
             if (this.YPos < 0 || this.YPos + this.Size > this.yMax)
                 this.YVel *= -1;
 
-            // Mit Paddel kollidieren
-            var out1 = spieler1.Paddel.Kollidieren(this.XPos, this.YPos, this.Size);
-            if (out1 != -1)
+            // Kollision mit Spieler abfragen
+            if (this.XPos < spieler1.Xpos)
             {
-                this.XVel *= -1;
-                this.YVel += out1 / 10;
-            }
-            var out2 = spieler2.Paddel.Kollidieren(this.XPos, this.YPos, this.Size);
-            if (out2 != -1)
-            {
-                this.XVel *= -1;
-                this.YVel += out2 / 10;
+                spieler1.Paddel
             }
 
             // Geschwindigkeit zur Position addieren
