@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PONG
 {
-    public partial class MainMenu : Form
+    public partial class MainMenu : Form, IMainMenu
     {
         private bool endlos;
         private SoundPlayer menuClick;
@@ -43,15 +43,22 @@ namespace PONG
             menuClick = new SoundPlayer(Properties.Resources.menuClick);
         }
 
+        public void ShowMenu()
+        {
+            this.ShowDialog();
+        }
+
         private void PictureBoxEinzelspieler_Click(object sender, EventArgs e)
         {
-            var eventArgs = new MainMenuEventArgs(Spielermodus.Einzelspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
+            this.Hide();
+            var eventArgs = new StartGameEventArgs(Spielermodus.Einzelspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
             StartEinzelspieler?.Invoke(this, eventArgs);
         }
 
         private void PictureBoxMehrspieler_Click(object sender, EventArgs e)
         {
-            var eventArgs = new MainMenuEventArgs(Spielermodus.Mehrspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
+            this.Hide();
+            var eventArgs = new StartGameEventArgs(Spielermodus.Mehrspieler, endlos ? Punktemodus.Endlos : Punktemodus.Punkte);
             StartMehrspieler?.Invoke(this, eventArgs);
         }
 
@@ -103,15 +110,13 @@ namespace PONG
             ((PictureBox)sender).BackgroundImage = Properties.Resources.xButtonDisabled;
         }
 
-        public event EventHandler StartEinzelspieler;
-        public event EventHandler StartMehrspieler;
-        public delegate void MainMenuEventHandler(object sender, MainMenuEventArgs a);
-
+        public event StartGameEventHandler StartEinzelspieler;
+        public event StartGameEventHandler StartMehrspieler;
     }
 
-    public class MainMenuEventArgs : EventArgs
+    public class StartGameEventArgs : EventArgs
     {
-        public MainMenuEventArgs(Spielermodus sM, Punktemodus pM)
+        public StartGameEventArgs(Spielermodus sM, Punktemodus pM)
         {
             Spielermodus = sM;
             Punktemodus = pM;
@@ -120,4 +125,6 @@ namespace PONG
         public Punktemodus Punktemodus { get; }
         public Spielermodus Spielermodus { get; }
     }
+
+    public delegate void StartGameEventHandler(object sender, StartGameEventArgs e);
 }

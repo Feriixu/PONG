@@ -1,34 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 
 namespace PONG
 {
-    public class Ball : Spielobjekt
+    public class Ball : Spielobjekt, IBall
     {
-        public Ball() : this(0, 0, 0)
-        {
+        public Ball() : this(0, 0, 0) { }
 
-        }
+        public Ball(Size size, int radius) : this(size.Width, size.Height, radius) { }
 
         public Ball(int xMax, int yMax, int radius) : base(xMax, yMax)
         {
-            this.Radius = radius;
+            this.Size = radius;
+            this.xMax = xMax;
+            this.yMax = yMax;
+            Random r = new Random();
+
+            this.XVel = r.Next(0, 2) == 0 ? -2 : 2;
+            this.YVel = 0;
         }
 
-        public int Radius
+        private int Size;
+        private int xMax;
+        private int yMax;
+        private ISpieler spieler1;
+        private ISpieler spieler2;
+
+        public void SetSpieler(ISpieler spieler1, ISpieler spieler2)
         {
-            get => Radius;
-            set
-            {
-            }
+            this.spieler1 = spieler1;
+            this.spieler2 = spieler2;
         }
 
-        public void Zeichnen(Graphics g)
+        public void UpdatePos()
         {
-            throw new System.NotImplementedException();
+            // Kollision abfragen und reflektieren
+            if (this.XPos < 0 || this.XPos + this.Size > this.xMax)
+                this.XVel *= -1;
+            if (this.YPos < 0 || this.YPos + this.Size > this.yMax)
+                this.YVel *= -1;
+
+            // Geschwindigkeit zur Position addieren
+            this.XPos += this.XVel;
+            this.YPos += this.YVel;
+        }
+
+        public void Zeichnen(Graphics g) => g.FillRectangle(Brushes.White, this.XPos, this.YPos, this.Size, this.Size);
+        public void IncreaseSpeed()
+        {
+            this.XVel *= 1.2F;
+            this.YVel *= 1.2F;
         }
     }
 }
