@@ -67,13 +67,16 @@ namespace PONG
 
         private void timerGameTick_Tick(object sender, EventArgs e)
         {
+            // Kollision mit Spieler überprüfen
+            
             // Positionen Updaten
             this.ball.UpdatePos();
             this.spieler1.UpdatePos();
             this.spieler2.UpdatePos();
 
+
             // Alles zeichnen
-            //this.graphics.Clear(Color.Black);
+            this.graphics.Clear(Color.Black);
             this.ball.Zeichnen(this.graphics);
             this.spieler1.Zeichnen(this.graphics);
             this.spieler2.Zeichnen(this.graphics);

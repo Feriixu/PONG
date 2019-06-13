@@ -4,18 +4,21 @@ namespace PONG
 {
     public class Spieler : ISpieler
     {
-        private readonly IPaddel Paddel;
-        public int Punkte => this.punkte;
+        public IPaddel Paddel => this.paddel;
+        private readonly IPaddel paddel;
 
+        public int Punkte => this.punkte;
         private readonly int punkte;
+
         public string Name { get; }
         private readonly string name;
+
         private PointF scorePosition;
 
         public Spieler(SpielerPosition spielerposition, int xMax, int yMax, string name)
         {
             // Erzeuge neues Paddel für den Spieler
-            this.Paddel = new Paddel(xMax, yMax, spielerposition);
+            this.paddel = new Paddel(xMax, yMax, spielerposition);
             // Setze Punkte auf startwert
             this.punkte = 0;
             // Setze den Namen
@@ -36,18 +39,18 @@ namespace PONG
 
         public void UpdatePos() =>
             // Update die Position des paddels
-            this.Paddel.UpdatePos();
+            this.paddel.UpdatePos();
 
         public void Zeichnen(Graphics g)
         {
             // Zeichne das Paddel
-            this.Paddel.Zeichnen(g);
+            this.paddel.Zeichnen(g);
             var f = new Font("Agency FB", 30.0F);
             g.DrawString(this.punkte.ToString(), f, Brushes.White, this.scorePosition, new StringFormat() { Alignment = StringAlignment.Center });
         }
 
         public void SetMov(PaddelBewegung mov) =>
             // Setze vel für das Paddel
-            this.Paddel.SetMov(mov);
+            this.paddel.SetMov(mov);
     }
 }
