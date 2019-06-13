@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PONG.Spielfeld">
+    <Position X="4.75" Y="8.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAKAAAAAAAACAAAACAAAAACAAAAAAAAAAIAI=</HashCode>
+      <FileName>View\Spielfeld.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PongGame" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PONG.MainMenu">
+    <Position X="0.5" Y="0.5" Width="4.5" />
+    <NestedTypes>
+      <Delegate Name="PONG.MainMenu.MainMenuEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>View\MainMenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>TAhAAIBAAiAAEIEwASCAAEESIAAEAAQAIAAAAAAQAAQ=</HashCode>
+      <FileName>View\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.PongGame">
+    <Position X="9.5" Y="8" Width="4.5" />
+    <AssociationLine Name="PaddelBewegung1" Type="PONG.PaddelBewegung">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.03" Y="0.44" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PaddelBewegung2" Type="PONG.PaddelBewegung">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.134" Y="0.149" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Punktemodus" Type="PONG.Punktemodus">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.098" Y="0.194" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIASBAIAAAECCAQEgAAAQAAgABACAAAAQIA=</HashCode>
+      <FileName>Controller\PongGame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ball" />
+      <Property Name="Spieler1" />
+      <Property Name="Spieler2" />
+      <Property Name="PaddelBewegung1" />
+      <Property Name="PaddelBewegung2" />
+      <Property Name="Punktemodus" />
+      <Property Name="Spielermodus" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PONG.Properties.Resources">
+    <Position X="7.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CACAAgBIQAAAECAAAAABMEEACSAgAQAIAAAgAEAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Properties.Settings" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Spielobjekt">
+    <Position X="13" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAABAACAAAA=</HashCode>
+      <FileName>Model\Spielobjekt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Ball">
+    <Position X="11.5" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Paddel">
+    <Position X="14.75" Y="5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAACAAAAAAACACAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\Paddel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PONG.Program">
+    <Position X="6" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAEAQIAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Controller\Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainMenu" />
+      <Property Name="Spielfeld" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PONG.Spieler">
+    <Position X="15.25" Y="8.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAAAAAAAAQAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Spieler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Paddel" />
+      <Property Name="SpielerPosition" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="PONG.SpielerPosition">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Enums\SpielerPosition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PONG.PaddelBewegung">
+    <Position X="9.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAEAA=</HashCode>
+      <FileName>Enums\PaddelBewegung.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PONG.Punktemodus">
+    <Position X="11.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Spielmodus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PONG.Spielermodus">
+    <Position X="13" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Spielermodus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
