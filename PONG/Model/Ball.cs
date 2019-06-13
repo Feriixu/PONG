@@ -32,11 +32,11 @@ namespace PONG
             this.spieler2 = spieler2;
         }
 
-        public bool UpdatePos()
+        public int UpdatePos()
         {
             // Kollision abfragen und reflektieren
             if (this.XPos < 0 || this.XPos + this.Size > this.xMax)
-                return true;
+                return ((this.XPos < 0) ? -1 : 1);
             if (this.YPos < 0 || this.YPos + this.Size > this.yMax)
                 this.YVel *= -1;
 
@@ -56,7 +56,7 @@ namespace PONG
             this.XPos += this.XVel;
             this.YPos += this.YVel;
 
-            return false;
+            return 0;
         }
 
         public void Zeichnen(Graphics g) => g.FillRectangle(Brushes.White, this.XPos, this.YPos, this.Size, this.Size);
@@ -64,6 +64,18 @@ namespace PONG
         {
             this.XVel *= 1.2F;
             this.YVel *= 1.2F;
+        }
+
+        public void Reset()
+        {
+            this.XPos = xMax / 2;
+            this.YPos = yMax / 2;
+
+            Random r = new Random();
+
+            this.XVel = r.Next(0, 2) == 0 ? -2 : 2;
+            this.YVel = 0;
+
         }
     }
 }

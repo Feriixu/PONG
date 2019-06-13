@@ -6,7 +6,8 @@ namespace PONG
     {
         void IncreaseSpeed();
         void SetSpieler(ISpieler spieler1, ISpieler spieler2);
-        void UpdatePos();
+        int UpdatePos();
         void Zeichnen(Graphics g);
+        void Reset();
     }
 }

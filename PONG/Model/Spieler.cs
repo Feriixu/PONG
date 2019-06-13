@@ -8,7 +8,7 @@ namespace PONG
         private readonly IPaddel paddel;
 
         public int Punkte => this.punkte;
-        private readonly int punkte;
+        private int punkte;
 
         public string Name { get; }
         private readonly string name;
@@ -52,5 +52,10 @@ namespace PONG
         public void SetMov(PaddelBewegung mov) =>
             // Setze vel für das Paddel
             this.paddel.SetMov(mov);
+
+        public void AddPunkt()
+        {
+            this.punkte++;
+        }
     }
 }

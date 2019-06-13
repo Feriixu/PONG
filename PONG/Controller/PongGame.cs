@@ -68,7 +68,18 @@ namespace PONG
         private void timerGameTick_Tick(object sender, EventArgs e)
         {
             // Positionen Updaten
-            this.ball.UpdatePos();
+            var playerWon = this.ball.UpdatePos();
+            switch (playerWon)
+            {
+                case -1:
+                    spieler1.AddPunkt();
+                    ball.Reset();
+                    break;
+                case 1:
+                    spieler2.AddPunkt();
+                    ball.Reset();
+                    break;
+            }
             this.spieler1.UpdatePos();
             this.spieler2.UpdatePos();
 

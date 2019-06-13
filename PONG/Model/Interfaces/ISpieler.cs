@@ -11,5 +11,6 @@ namespace PONG
         void SetMov(PaddelBewegung mov);
         void UpdatePos();
         void Zeichnen(Graphics g);
+        void AddPunkt();
     }
 }
