@@ -4,9 +4,9 @@ namespace PONG
 {
     public interface IPaddel
     {
+        bool Kollidieren(float x, float y, int ballSize, out float angle);
+        void SetMov(PaddelBewegung mov);
         void UpdatePos();
         void Zeichnen(Graphics g);
-        void SetMov(PaddelBewegung mov);
-        void Kollidieren(int x, int y);
     }
 }

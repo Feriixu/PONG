@@ -17,6 +17,7 @@ namespace PONG
             this.höhe = 200;
             this.breite = 20;
             this.yMax = yMax;
+            this.position = position;
 
             // Position entsprechen des Spielers einstellen
             switch (position)
@@ -35,12 +36,13 @@ namespace PONG
         private int höhe;
         private int breite;
         private int yMax;
+        private SpielerPosition position;
 
         public void UpdatePos()
         {
             // Geschwindigkeit auf position addieren wenn das paddel nicht am rand ist
             if (this.YPos >= 0 && this.YVel < 0 || this.YPos + this.höhe <= yMax && this.YVel > 0)
-                    this.YPos += this.YVel;
+                this.YPos += this.YVel;
         }
 
         public void Zeichnen(Graphics g) => g.FillRectangle(Brushes.White, new Rectangle((int)Math.Round(this.XPos), (int)Math.Round(this.YPos), this.breite, this.höhe));
@@ -59,6 +61,36 @@ namespace PONG
                     this.YVel = 0;
                     break;
             }
+        }
+
+        public bool Kollidieren(float x, float y, int ballSize, out float angle)
+        {
+            angle = 0;
+            if (this.YPos > y + ballSize || this.YPos + this.höhe < y)
+            {
+                return false;
+            }
+
+            // Verschiedene kollisions berechnungen je nach dem auf welcher seite das paddel ist
+            switch (this.position)
+            {
+                case SpielerPosition.Links:
+                    if (x <= this.XPos + this.breite)
+                    {
+                        angle = (float)(Math.PI / 2 - Math.Asin(this.YPos + (this.höhe / 2) - y + (ballSize / 2) / 2));
+                        return true;
+                    }
+                    break;
+                case SpielerPosition.Rechts:
+                    if (x + ballSize >= this.XPos)
+                    {
+                        angle = (float)(Math.PI / 2 - Math.Asin(this.YPos + (this.höhe / 2) - y + (ballSize / 2) / 2));
+                        return true;
+                    }
+                    break;
+            }
+
+            return false;
         }
     }
 }

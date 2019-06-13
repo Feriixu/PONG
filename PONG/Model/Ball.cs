@@ -32,22 +32,31 @@ namespace PONG
             this.spieler2 = spieler2;
         }
 
-        public void UpdatePos()
+        public bool UpdatePos()
         {
             // Kollision abfragen und reflektieren
             if (this.XPos < 0 || this.XPos + this.Size > this.xMax)
-                this.XVel *= -1;
+                return true;
             if (this.YPos < 0 || this.YPos + this.Size > this.yMax)
                 this.YVel *= -1;
 
             // Kollision mit Spieler abfragen
-            if (this.XPos < spieler1.Xpos)
+            bool result1 = spieler1.Paddel.Kollidieren(this.XPos, this.YPos, this.Size, out var angle1);
+            if (result1)
             {
-                spieler1.Paddel
+                this.XVel *= -1;
+            }
+
+            bool result2 = spieler2.Paddel.Kollidieren(this.XPos, this.YPos, this.Size,  out var angle2);
+            if (result2)
+            {
+                this.XVel *= -1;
             }
 
             this.XPos += this.XVel;
             this.YPos += this.YVel;
+
+            return false;
         }
 
         public void Zeichnen(Graphics g) => g.FillRectangle(Brushes.White, this.XPos, this.YPos, this.Size, this.Size);

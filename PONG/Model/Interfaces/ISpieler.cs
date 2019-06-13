@@ -5,10 +5,11 @@ namespace PONG
     public interface ISpieler
     {
         string Name { get; }
+        IPaddel Paddel { get; }
         int Punkte { get; }
 
-        void Zeichnen(Graphics g);
-        void UpdatePos();
         void SetMov(PaddelBewegung mov);
+        void UpdatePos();
+        void Zeichnen(Graphics g);
     }
 }
